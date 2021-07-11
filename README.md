@@ -185,15 +185,15 @@ ___
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+
 # 数据结构
 
 Java HashMap原理：
 
 <https://yikun.github.io/2015/04/01/Java-HashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/>
 
-各种sort的时间复杂度：
+![各种排序算法复杂度](https://img-blog.csdnimg.cn/20210711174312694.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/3b06006914fc96f506c52c4f27404ac2.png)
 
 冒泡排序参考：<https://www.cnblogs.com/bigdata-stone/p/10464243.html>
 
@@ -277,8 +277,8 @@ Hi=RH1（key） i=1，2，…，k
 拉链法
 
 **发生哈希碰撞但是key值不同**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174428714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/25132f36145d5b1534018901866c302f.png)
 
 4、建立公共溢出区
 
@@ -313,8 +313,8 @@ size（hashmap中元素个数）\>initailCapacity\*loadFactor
 ### Go Map原理
 
 如下图所示，当往map中存储一个kv对时，通过k获取hash值，hash值的低八位和bucket数组长度取余，定位到在数组中的那个下标，hash值的高八位存储在bucket中的tophash中，用来快速判断key是否存在，key和value的具体值则通过指针运算存储，当一个bucket满时，通过overfolw指针链接到下一个bucket。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174451132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/21ceacb102fa9599a1c9b9c014da8ac0.png)
 
 阅读一下map存储的源码，如下图所示，当往map中存储一个kv对时，通过k获取hash值，hash值的低八位和bucket数组长度取余，定位到在数组中的那个下标，hash值的高八位存储在bucket中的tophash中，用来快速判断key是否存在，key和value的具体值则通过指针运算存储，当一个bucket满时，通过overfolw指针链接到下一个bucket。
 
@@ -365,8 +365,8 @@ Scheduler，用红黑树管理进程控制块，进程的虚拟内存区域都�
 4、Nginx中用红黑树管理timer，因为红黑树是有序的，可以很快的得到距离当前最小的定时器；
 
 5、Java中TreeMap, TreeSet的实现；
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711181528453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/a1fa727d0db9b7bcff01f55fdb211c17.png)
 
 ### 红黑树与B+树区别
 
@@ -520,7 +520,8 @@ Unit）是一块超大规模的集成电路，主要解释计算机指令以及�
 
 **内存结构：**
 
-![](media/c6838a9bce559613f4411f6cf0879e70.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174526636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 -   .text: 存放源代码
 
@@ -613,7 +614,6 @@ R0相当于内核态，R3相当于用户态；（Intel的第1环和第2环的意
 
 （栈应该被看成一个短期存储数据的地方，存在在栈中的数据项没有名字，只是按照后进先出来操作罢了。栈经常可以用来在寄存器紧张的情况下，临时存储一些数据，并且十分安全。当寄存器空闲后，我们可以从栈中弹出该数据，供寄存器使用。这种临时存放数据的特性，使得它经常用来**存储局部变量，函数参数，上下文环境等。**）
 
-![](media/d36760cfd9bcd2200888bf215edbe917.png)
 
 ## CPU体系结构
 
@@ -621,7 +621,6 @@ R0相当于内核态，R3相当于用户态；（Intel的第1环和第2环的意
 
 [https://blog.csdn.net/yhb1047818384/article/details/79604976?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160898868516780279121712%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fall.%252522%25257D&request_id=160898868516780279121712&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2\~all\~first_rank_v2\~rank_v29-3-79604976.pc_search_result_no_baidu_js&utm_term=CPU%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B9%8Bcache%E5%B0%8F%E7%BB%93](https://blog.csdn.net/yhb1047818384/article/details/79604976?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160898868516780279121712%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fall.%252522%25257D&request_id=160898868516780279121712&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-3-79604976.pc_search_result_no_baidu_js&utm_term=CPU%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B9%8Bcache%E5%B0%8F%E7%BB%93)
 
-![](media/015741966096a69b0fff17d3264b5472.png)
 
 Cache（可以LRU）
 
@@ -647,13 +646,14 @@ Cache（可以LRU）
 
 进程是资源分配的基本单位，但是线程不拥有资源，线程可以访问隶属进程的资源。
 
-![](media/bbe2d1249cbf72e44d38994922826738.jpeg)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174557959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 上图为线程状态机
 
 例：线程所请求的I/O完成，故被唤醒，即从阻塞态到就绪态。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174611660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/3c41fce62c7b718e94a93d70021e2c1c.png)
 
 **进程与线程的区别总结**
 
@@ -820,8 +820,8 @@ IPC。
 ### 协程
 
 **协程（Coroutines）是一种比线程更加轻量级的存在，正如一个进程可以拥有多个线程一样，一个线程可以拥有多个协程。**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021071117462845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/303ebfdabbc34c923f670326b738134f.png)
 
 协程是一种轻量级的线程
 
@@ -940,7 +940,8 @@ M，而没有空闲的，就会去创建新的 M。
 
 以上这个图讲的是两个线程(内核线程)的情况。一个M会对应一个内核线程，一个M也会连接一个上下文P，一个上下文P相当于一个“处理器”，一个上下文连接一个或者多个Goroutine。为了运行goroutine，线程必须保存上下文。
 
-![](media/3d68af3e257245b6a81741efa9fedf81.jpeg)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174644179.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 需要P 上下文的目的，是让我们可以直接放开其他线程，当遇到内核线程阻塞的时候。
 
@@ -967,7 +968,6 @@ G0 是每次启动一个 M 都会第一个创建的 gourtine，G0 仅用于负�
 不指向任何可执行的函数，每个 M 都会有一个自己的 G0。在调度或系统调用时会使用 G0
 的栈空间，全局变量的 G0 是 M0 的 G0。
 
-![](media/80f7d07afb78579997402e594ec42b10.png)
 
 **均衡的分配工作**
 
@@ -1230,7 +1230,6 @@ monitor）。hypervisor是所有虚拟化技术的核心，非中断的支持多
 
 参考：<https://blog.csdn.net/bbc955625132551/article/details/71597863>
 
-![](media/fd7af00b38fd98e38769a8fcf499421e.png)
 
 ## CPU中断
 
@@ -1265,7 +1264,8 @@ Interrupt）。
 
 异常可分为故障（fault）、陷阱（trap）和终止（abort）三类。
 
-![](media/f19425c8903d3414ec58e59bc72ae9bc.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174711593.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 中断也是需要CPU
 check的！也就是说：处理器在每个指令周期都会去查看中断寄存器，如果中断寄存器（source
@@ -1297,11 +1297,9 @@ CPU 寄存器是 CPU 内置的容量小、但速度极快的内存。
 
 >   2）系统调用使得用户程序有更好的可移植性。
 
-3）系统调用使得内核能更好的管理用户程序，增强了系统的稳定性。
+> 3）系统调用使得内核能更好的管理用户程序，增强了系统的稳定性。
 
 >   4）系统调用有效的分离了用户程序和内核的开发。
-
->   ![](media/bacfb0d6697845c484d186b0b24750f0.png)
 
 所以，一次系统调用的过程，其实是发生了两次 CPU
 上下文切换。（用户态-内核态-用户态）
@@ -1491,7 +1489,9 @@ FIFO
 
 分段的做法是把每个表分成段，一个段构成一个独立的地址空间。每个段的长度可以不同，并且可以动态增长。
 
-Eg: ![](media/40bf9443bde41cdcfb2575436c38fc05.png)
+Eg: 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174814105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 **段页式**
 
@@ -1522,7 +1522,8 @@ COPY等软件制作的一个盘的打包文件，它可以在将来恢复这个�
 
 ## 编译&链接
 
-![](media/766dcf125d5707e0b71629f011c5ad42.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174830463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 在链接过程中，静态链接(static
 linking)和动态链接就出现了区别。静态链接的过程就已经把要链接的内容已经链接到了生成的可执行文件中，就算你在去把静态库删除也不会影响可执行程序的执行；而动态链接这个过程却没有把内容链接进去，而是在执行的过程中，再去找要链接的内容，生成的可执行文件中并没有要链接的内容，所以当你删除动态库时，可执行程序就不能运行。
@@ -1562,12 +1563,11 @@ Linux 查看端口占用情况可以使用 lsof 和 netstat 命令。
 lsof(list open files)是一个列出当前系统打开文件的工具。
 
 ## Linux文件系统
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174845193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/c5d7d1b127937c968bedab0b76f9b5d5.png)
 
-![](media/3f4538ae8653c87c9c2aaa7454331bac.png)
+![](https://img-blog.csdnimg.cn/20210711174900912.png)
 
-![](media/480b07fb1ce1f3618bec3501261633dd.png)
 
 对分区进行格式化是为了在分区上建立文件系统。一个分区通常只能格式化为一个文件系统，但是磁盘阵列等技术可以将一个分区格式化为多个文件系统。
 
@@ -1580,7 +1580,8 @@ inode：一个文件占用一个 inode，记录文件的属性，同时记录此
 编号。因此引入了间接、双间接、三间接引用。间接引用让 inode 记录的引用 block
 块记录引用信息。
 
-![](media/14773438be988dd3b2c443ca4b4107da.jpeg)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174922709.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 block：记录文件的内容，文件太大时，会占用多个 block。
 
@@ -1627,10 +1628,9 @@ version=\$(uname -r)，则 version 的值为 4.15.0-22-generic。
 tr 用来删除一行中的字符，或者对字符进行替换。
 
 ## Linux 进程管理
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174939543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711174945203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/7359761442c36069fc30288d82759eee.png)
-
-![](media/4bd87eb0d7312fd54630fe0fe2cb64f2.png)
 
 fork():一个进程，包括代码、数据和分配给进程的资源。fork（）函数通过系统调用创建一个与原来进程几乎完全相同的进程，也就是两个进程可以做完全相同的事，但如果初始参数或者传入的变量不同，两个进程也可以做不同的事。
 
@@ -1778,12 +1778,8 @@ node-to-node data transfer where data is packaged into frames.
 
 报文：message
 
-![](media/5c70c3d4656d0d19ec3890993e219300.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175011841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![OSI Model Layers and its Functions \| Electrical
-Academia](media/51a01fdbdc8306c17a66e6f2692e32bd.gif)
-
-![](media/53b326aad3547a07c416a26ebe944487.png)
 
 ## 物理层
 
@@ -1998,7 +1994,8 @@ CIDR 的地址掩码可以继续称为子网掩码，子网掩码首 1 长度为
 网络层实现主机之间的通信，而链路层实现具体每段链路之间的通信。因此在通信过程中，IP
 数据报的源地址和目的地址始终不变，而 MAC 地址随着链路的改变而改变。
 
-![](media/931d9631feb77ec84e079c988ff13671.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175026252.png)
+
 
 ### IP与MAC地址
 
@@ -2009,8 +2006,6 @@ MAC地址又称为物理地址、硬件地址，用来定义网络设备的位�
 interface card都需要有一个唯一的MAC地址。
 
 生产厂商：manufacturer
-
-![](media/c39b2fb66861ead776d969d30967db11.png)
 
 每个主机都有一个 ARP 高速缓存，里面有**本局域网上**的各主机和路由器的 IP 地址到
 MAC 地址的映射表。
@@ -2039,7 +2034,7 @@ ARP 实现由 IP 地址得到 MAC 地址。
 
 局域网为何使用MAC或IP？
 
-![](media/9c8fb5844a2a227ac6e89040201e2464.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175110164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
 ICMP 是为了更有效地转发 IP 数据报和提高交付成功的机会。它封装在 IP
 数据报中，但是不属于高层协议。比如ping 延迟 主要用来测试两台主机之间的连通性
@@ -2061,7 +2056,8 @@ Traceroute 是 ICMP 的另一个应用，用来跟踪一个分组从源点到终
 地址数往往远小于本机构所拥有的主机数。并且一个机构并不需要把所有的主机接入到外部的互联网中，机构内的计算机可以使用仅在本机构有效的
 IP 地址（专用地址）。
 
-![](media/0d11e4e3f5b08628b3eb3ffcb9fc3fd9.jpeg)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175137120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 通过NAT转换 专用网内部的主机使用本地 IP 地址又想和互联网上的主机通信时，可以使用
 NAT 来将本地 IP 转换为全球 IP。
@@ -2141,7 +2137,7 @@ BGP 只能寻找一条比较好的路由，而不是最佳路由。
 **每个 AS 都必须配置 BGP 发言人，通过在两个相邻 BGP 发言人之间建立 TCP
 连接来交换路由信息。**
 
-![](media/27d73d89815b310aacdb11e2317112ed.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175149789.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
 AS：autonomous
 system。在互联网中，一个自治系统(AS)是一个有权自主地决定在本系统中应采用何种路由协议的小型单位
@@ -2170,11 +2166,13 @@ system。在互联网中，一个自治系统(AS)是一个有权自主地决定�
 
 端到端的概念不仅仅是一根网线两端的两台电脑，它是逻辑的，可能是跨地域的。
 
-![](media/0b100d11e95fde7e4b6708126b185122.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175211235.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 比如：你家在北京，你给你上海的一个朋友传一个文件，这时候你们俩之间需要建立一个连接，可能是通过qq，可能是通过FTP……虽然中间经过了电信、网通等ISP，但是对于通讯的两端来说，北京的你和你上海的朋友之间，这就是一个端到端的连接。
 
-![](media/ee23c3d2dc53bf46bf482c666ff74edd.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175216296.png)
+
 
 *路由*（routing）是指分组从源到目的地时，决定端到端路径的网络范围的进程
 
@@ -2185,13 +2183,15 @@ UDP 首部），支持一对一、一对多、多对一和多对多的交互通�
 首部字段只有 8 个字节，包括源端口、目的端口、长度、检验和。12
 字节的伪首部是为了计算检验和临时添加的。
 
-![](media/41df1d52acc473316e7a624ce3a178ff.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175225730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 传输控制协议 TCP（Transmission Control
 Protocol）是面向连接的，提供可靠交付，有流量控制，拥塞控制，提供全双工通信，面向字节流（把应用层传下来的报文看成字节流，把字节流组织成大小不等的数据块），每一条
 TCP 连接只能是点对点的（一对一）。
 
-![](media/c0177cd36bbefadfc86c3835c17c8cad.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175232954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 序号：seq
 
@@ -2227,9 +2227,9 @@ checksum。TCP校验和（Checksum）是一个端到端的校验和，由发送�
 校验和需要考虑的一部分。最终目的端根据伪报头和 数据单元计算
 校验和以验证通信数据在传输过程中没有改变而且到达了正确的目的地址。
 
-### TCP三次握手：
+### TCP三次握手
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175311930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/a5b026232749a3f734f7a11121d3ae63.png)
 
 假设 A 为客户端，B 为服务器端。
 
@@ -2261,7 +2261,8 @@ B 收到 A 的确认后，连接建立。
 
 ### TCP四次挥手
 
-![](media/35fd7f9612bc46ea7b91a3889763a2ba.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175329884.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 （报文：Message ）
 
@@ -2312,7 +2313,6 @@ TCP
 
 （RTT：Round-Trip Time）（RTO, Retransmission Time Out）
 
-![](media/9d6a84bdae751364e93aba1131c7cf52.png)
 
 重传次数
 
@@ -2332,7 +2332,8 @@ TCP
 {31, 34, 35}，其中 {31} 按序到达，而 {34, 35} 就不是，因此只对字节 31
 进行确认。发送方得到一个字节的确认之后，就知道这个字节之前的所有字节都已经被接收。
 
-![](media/6842decfaeefc7d3c59c821f74ec336e.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175346246.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ### TCP传输过程：
 
@@ -2344,7 +2345,8 @@ TCP
 
 Ack号 = Seq号 + 传递的字节数 + 1
 
-![](media/40ccd891ba0725bc41bd7772424ced35.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175354236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ### TCP拥塞控制
 
@@ -2373,7 +2375,7 @@ Size，最大报文长度），是TCP协议定义的一个选项，MSS选项用�
 
 拥塞避免算法：让拥塞窗口cwnd缓慢地增大，即每经过一个往返时间RTT就把发送方的拥塞窗口cwnd加1，而不是加倍。这样拥塞窗口cwnd按线性规律缓慢增长，比慢开始算法的拥塞窗口增长速率缓慢得多。
 
-![](media/de8d4c17cd9da6c2ca2144ba279334ed.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175405163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
 **快重传：**
 
@@ -2381,7 +2383,8 @@ Size，最大报文长度），是TCP协议定义的一个选项，MSS选项用�
 
 快恢复：
 
-![](media/fc12bf84007e73af09b919e7f474af1e.jpeg)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175416551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 （快速重传算法首次出现在4.3BSD的Tahoe版本，快速恢复首次出现在4.3BSD的Reno版本，也称之为Reno版的TCP拥塞控制算法。
 
@@ -2424,7 +2427,8 @@ UDP），实际上，已经有项目在这么做了，比如Google的QUIC和WebR
 
 为什么？我们寻求在成本、质量、时延上寻找一个平衡
 
-![](media/307f1889211a6bd1434bf4722c5d4d63.jpeg)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175431480.png)
+
 
 构建于UDP之上的RUDP，增加了数据窗口、拥塞控制、确认机制、重传机制等可靠性保障机制。
 
@@ -2509,7 +2513,8 @@ TELNET 用于登录到远程主机上，并且远程主机上的输出也会返�
 SMTP 只能发送 ASCII 码，而互联网邮件扩充 MIME 可以发送二进制文件。MIME
 并没有改动或者取代 SMTP，而是增加邮件主体的结构，定义了非 ASCII 码的编码规则。
 
-![](media/8178d617751e48705f1772dd339c6acd.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175445489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ### Web 页面请求过程
 
@@ -2783,8 +2788,6 @@ POST请求方式一定参考：
 
 <https://www.cnblogs.com/yaojyhappy/p/9447160.html>
 
-![](media/41b7bf073edc723fe2e0c8d101ea5c2a.png)
-
 参考：https://www.cnblogs.com/could-deng/p/8358950.html
 
 #### POST FORM流程
@@ -2864,7 +2867,7 @@ Date:生成响应的日期和时间；Content-Type:指定了MIME类型的HTML(te
 
 1\. 短连接与长连接
 
-![](media/5a756ef02ebd371dced94884db6fe840.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175524980.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
 长连接：Connection : Keep-Alive
 
@@ -3025,7 +3028,8 @@ Cookie主要用于以下三个方面：
 
 参考：<https://www.sohu.com/a/333802497_236714>
 
-![](media/24988450acb4e16a6a90d3bc401d3c6e.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175538312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 **Session**
 
@@ -3173,19 +3177,23 @@ HTTPS 并不是新协议，而是让 HTTP 先和 SSL（Secure Sockets Layer）�
 
 1.对称加密
 
-![](media/c29f1767fb947606162362a3cf36241b.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175553355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 2.非对称加密（SHA-256）
 
 反过来也可以
 
-![](media/a92eb07c039513da4b419d00e03ffca2.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175600266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 HTTP采用的加密方式：
 
 上面提到对称密钥加密方式的传输效率更高，但是无法安全地将密钥 Secret Key
-传输给通信方。而非对称密钥加密方式可以保证传输的安全性，因此我们可以利用非对称密钥加密方![](media/4393565f79ee1738e671f0ce02d7237a.png)式将
+传输给通信方。而非对称密钥加密方式可以保证传输的安全性，因此我们可以利用非对称密钥加密方式将
 Secret Key 传输给通信方。HTTPS 采用混合的加密机制，正是利用了上面提到的方案：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180351938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 使用非对称密钥加密方式，传输对称密钥加密方式所需要的 Secret Key，从而保证安全性;
 
@@ -3208,7 +3216,9 @@ HTTPS 的缺点
 
 通过使用 证书 来对通信方进行认证。
 
-![](media/f124262d5d7ac2d6e2b643eba64b2290.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180408835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
+
 
 ### 攻击防范
 
@@ -3291,7 +3301,8 @@ Socket是一种相互通信计算机之间的双向端口，具体包括主机�
 
 到底什么是Socket：
 
-![](media/c3ec8e080a3010b48d37c5f86ed3075a.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175622621.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 <https://blog.csdn.net/pashanhu6402/article/details/96428887>
 
@@ -3302,11 +3313,14 @@ Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它是一�
 所谓套接字(Socket)，就是对网络中不同主机上的应用进程之间进行双向通信的端点的抽象。
 一个套接字就是网络上进程通信的一端，提供了应用层进程利用网络协议交换数据的机制。
 
-Socket 流程：![](media/5e1057a5ff17e0aa49bcfd62ea7848f4.png)
+Socket 流程：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175646662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 **注：Connect是和Listen是一对 先connect和listen 再 accept**
 
-![](media/9300b2da44c20039062cd8c01aaadd0f.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021071117570060.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 具体函数意义参考：https://blog.csdn.net/pashanhu6402/article/details/96428887
 
@@ -3341,7 +3355,8 @@ Socket简单理解：
 
 <https://www.cnblogs.com/dolphinx/p/3460545.html>
 
-![](media/57e1c0e019e53f9845cb8cc5ad860b8b.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175708749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ## Socket与HTTP区别
 
@@ -3442,11 +3457,12 @@ I/O：将数据从内核缓冲区复制到应用进程缓冲区的阶段（第�
 
 具体参考：[http://cyc2018.gitee.io/cs-notes/\#/notes/Socket](http://cyc2018.gitee.io/cs-notes/#/notes/Socket)
 
-![](media/66a0c5381e46a5fb867c902b87c9b923.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175719516.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ## I/O 复用
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175725945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/362dc640c7ed4877e7c88ed24dee6d22.png)
 
 Linux对应到内核层面提供的用户接口即select、poll和epoll
 
@@ -3735,8 +3751,7 @@ Database transaction：
 
 事务指的是满足 ACID 特性的一组操作，可以通过 Commit 提交一个事务，也可以使用
 Rollback 进行回滚。
-
-![](media/f06d2ac55b97f51b5a26af5a0b95d0cc.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175805230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
 1\. 原子性（Atomicity）
 
@@ -3746,7 +3761,8 @@ Rollback 进行回滚。
 
 4\. 持久性（Durability）
 
-![](media/03bffa65885930f17a429ec8f52c8c5e.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175824557.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ## 隔离级别
 
@@ -3831,9 +3847,8 @@ Rollback 进行回滚。
 
 具体参考：https://blog.csdn.net/hustyangju/article/details/40116569
 
-![](media/bd31fc67bc7e795d14fd240eed9e6d79.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175843175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
 
-![](media/8311afc5580e303efacc591b842364f0.png)
 
 （快照（snapshot）读 Consistent Read）
 
@@ -4022,7 +4037,8 @@ A 的每一行都检测一次，这是非常耗时的。
 
 可串行化调度是指，通过并发控制，使得并发执行的事务结果与某个串行执行的事务结果相同。串行执行的事务互不干扰，不会出现并发一致性问题。
 
-![](media/0f3736d6af53c5e23da1ddea09779ea3.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175900162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 MySQL 隐式与显示锁定
 
@@ -4211,7 +4227,8 @@ B+树是B-树的变体，也是一种多路搜索树, 它与 B- 树的不同之�
 
 为所有叶子结点增加了一个链指针
 
-![](media/3abae339111c6a6c992c60cf11a450b4.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021071117591526.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 因为内节点并不存储
 data，所以一般B+树的叶节点和内节点大小不同，而B-树的每个节点大小一般是相同的，为一页。
@@ -4393,11 +4410,13 @@ Buffer----ElasticSearch被设计为每个Node都可以响应用户请求，因�
 
 看到，关系型数据库是按部就班地每个字段一列存，在MongDB里面就是一个JSON字符串存储。关系型数据可以为name、phone建立索引，MongoDB使用createIndex命令一样可以为列建立索引，建立索引之后可以大大提升查询效率。其他方面而言，就大的基本概念，二者之间基本也是类似的：
 
-![](media/b7f7a8e942934438c9b98d0fcad409c1.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175933114.png)
+
 
 ##### 5.总结 
 
-![](media/785c381e1703bc679f60d4dfca7225ea.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175944817.png)
+
 
 其余继续参考：<https://www.cnblogs.com/xrq730/p/11039384.html>
 
@@ -4411,13 +4430,15 @@ B树也称B-树,它是一颗多路平衡查找树。二叉树我想大家都不�
 
 另外，我们需要注意一个概念，描述一颗B树时需要指定它的阶数，**阶数表示了一个节点最多有多少个孩子节点**，一般用字母m表示阶数。
 
-![](media/f1e940ddc38e01bbb952015dcafc424b.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711175954716.png)
+
 
 B树的插入：判断当前结点key的个数是否小于等于m-1，如果满足，直接插入即可，如果不满足，将节点的中间的key将这个节点分为左右两部分，中间的节点放到父节点中即可。
 
 删除较复杂 参考上面链接
 
-![](media/ee5f1be94145780e5fd2d2071d178ac2.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180002685.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 **（图中的每个节点称为页，页就是我们上面说的磁盘块，在 MySQL
 中数据读取的基本单位都是页，所以我们这里叫做页更符合 MySQL
@@ -4473,7 +4494,8 @@ ORDER BY 和 GROUP BY
 
 如果您认识某个字，您可以快速地从自动中查到这个字。但您也可能会遇到您不认识的字，不知道它的发音，这时候，您就不能按照刚才的方法找到您要查的字，而需要去根据“偏旁部首”查到您要找的字，然后根据这个字后的页码直接翻到某页来找到您要找的字。但您结合“部首目录”和“检字表”而查到的字的排序并不是真正的正文的排序方法，比如您查“张”字，我们可以看到在查部首之后的检字表中“张”的页码是672页，检字表中“张”的上面是“驰”字，但页码却是63页，“张”的下面是“弩”字，页面是390页。很显然，这些字并不是真正的分别位于“张”字的上下方，现在您看到的连续的“驰、张、弩”三字实际上就是他们在非聚集索引中的排序，是字典正文中的字在非聚集索引中的映射。我们可以通过这种方式来找到您所需要的字，但它需要两个过程，先找到目录中的结果，然后再翻到您所需要的页码。我们把这种目录纯粹是目录，正文纯粹是正文的排序方式称为“非聚集索引”。
 
-![](media/0e0d147968c0d15fa62213e2305c9b53.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180205365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 （**非聚集索引，叶子节点存的是字段的值，通过这个非聚集索引的键值找到对应的聚集索引字段的值，再通过聚集索引键值找到表的某行，类似oracle通过键值找到rowid，再通过rowid找到行**
 
@@ -4484,7 +4506,8 @@ ORDER BY 和 GROUP BY
 
 聚集和非聚集索引的场景区别：
 
-![](media/cc63a87d189f873c3f79f8a71e8f2522.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180222852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 #### 聚集 VS 非聚集
 
@@ -4537,7 +4560,8 @@ Key和聚集索引搞混起来，或者认为这是同一个东西。这个概�
 Index）中，叶子节点直接包含卫星数据。在非聚集索引（NonClustered
 Index）中，叶子节点带有指向卫星数据的指针。
 
-![](media/533b49175ef2c993574f6e9b4b00e053.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180238200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 B+数参考：
 
@@ -4627,7 +4651,8 @@ MyISAM 中的 B+ 树索引实现与 InnoDB 中的略有不同。在 MyISAM 中�
 
 B\*树：
 
-![](media/b2cfdca25a393584b356dae62b4d583b.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180248344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 ### MySQL 索引
 
@@ -4856,7 +4881,8 @@ KV型NoSql最大的优点就是高性能，利用Redis自带的BenchMark做基�
 
 没有持久化的需求，可以容忍数据丢失，反正丢了再查询一把写入就是了
 
-![](media/dc0a84e647deac76d0559087fa95d94e.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180300721.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 **Redis
 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。**
@@ -5016,7 +5042,8 @@ rehash期间的操作：
 在查找时，从上层指针开始查找，找到对应的区间之后再到下一层去查找。下图演示了查找
 22 的过程。
 
-![](media/edd2025ac5cc77763ab6c8002f85905b.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180311298.png)
+
 
 与红黑树等平衡树相比，跳跃表具有以下优点：
 
@@ -5123,7 +5150,8 @@ Redis 基于 Reactor 模式开发了自己的网络事件处理器，使用 I/O
 
 服务器需要不断监听文件事件的套接字才能得到待处理的文件事件，但是不能一直监听，否则时间事件无法在规定的时间内执行，因此监听时间应该根据距离现在最近的时间事件来决定。
 
-![](media/a92f919f9f04844b916a2d77cf22d59f.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210711180320331.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDU0MDc2Ng==,size_16,color_FFFFFF,t_70)
+
 
 图：从事件处理的角度来看，服务器运行流程如下
 
